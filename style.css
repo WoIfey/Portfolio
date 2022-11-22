@@ -261,3 +261,12 @@ footer {
   background: #212529;
   color: var(--white);
 }
+
+@media only screen and (max-width: 650px) {
+  .spacing {
+    font-size: 1rem;
+  }
+  .col2Text {
+    font-size: 1.3rem;
+  }
+} ;
