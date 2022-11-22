@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+:root {
+  --home-background: #1f2421;
+  --col-background: #216869;
+  --white: #fff;
+  --black: #000;
+}
+
+/* Main */
+body {
+  background: var(--home-background);
+  font-family: "Nunito", sans-serif;
+}
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* Columns */
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  border-radius: 20px;
+  margin: 10px;
+  font-size: 3em;
+  background: var(--col-background);
+  color: var(--white);
+  box-shadow: 0 0 6px var(--black);
+  transition: 0.5s;
+  animation: 5s fadeIn;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.col:hover {
+  box-shadow: 0 0 6px var(--white);
+  transform: scale(1.02);
+  transition: 0.5s;
+}
+.col1:hover,
+.col2:hover,
+.colAbout:hover {
+  transform: none;
+}
+
+/* Background images for the columns */
+.col1,
+.row1p,
+.row2p,
+.row3p,
+.row1ap,
+.row2ap,
+.row3ap,
+.row4ap,
+.col4,
+.col4ap {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.col1 {
+  background-image: url(https://picsum.photos/700/400);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+.col2 {
+  background-image: url(Images/designer.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  animation: 2s fadeIn;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+.col3 {
+  height: 20vh;
+  width: 32vh;
+  font-size: 25px;
+  text-align: center;
+}
+.col4 {
+  background-image: url(https://picsum.photos/800/400);
+  height: 20vh;
+  cursor: not-allowed;
+  font-size: 2rem;
+}
+.col4ap {
+  background-image: url(Images/bingo.png);
+  height: 20vh;
+  font-size: 2rem;
+}
+.row1p {
+  background-image: url(Images/chat.png);
+  height: 50vh;
+}
+.row2p {
+  background-image: url(Images/cookie.png);
+}
+.row3p {
+  background-image: url(https://picsum.photos/900/400);
+  height: 40vh;
+}
+.row1ap {
+  background-image: url(Images/survey.png);
+}
+.row2ap {
+  background-image: url(Images/tribute.png);
+}
+.row3ap {
+  background-image: url(Images/technical.png);
+}
+.row4ap {
+  background-image: url(Images/product.png);
+}
+
+/* Column text */
+.rowText {
+  color: var(--white);
+  font-size: 3rem;
+  border-bottom: 5px solid var(--col-background);
+  border-radius: 10px;
+  padding-top: 25px;
+  animation: 5s fadeIn;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+.row1Text,
+.row2Text,
+.row3Text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+.row1Text {
+  background: none;
+  border: none;
+  color: var(--white);
+}
+.row2Text {
+  text-shadow: 0 0 8px var(--black);
+}
+.row1Text:hover,
+.row2Text:hover {
+  color: var(--white);
+  text-shadow: 0 0 8px var(--white);
+  transition: 0.5s;
+}
+.row3Text:hover {
+  color: var(--black);
+  text-shadow: 0 0 8px var(--white);
+  transition: 0.5s;
+}
+
+.col2Text {
+  height: 100%;
+  padding-top: 30px;
+  display: flex;
+  text-align: center;
+  font-size: 26px;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.black {
+  color: var(--black);
+}
+.spacing {
+  padding: 0 30px 0 30px;
+}
+
+/* Height fix */
+#home {
+  height: auto;
+}
+section {
+  height: 100vh;
+}
+
+/* About section */
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.colAbout {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Social Icons */
+.links {
+  font-size: 4rem;
+  transition: 0.5s;
+  text-shadow: 1px 3px 15px rgba(0, 0, 0, 0.548);
+}
+
+.links:hover {
+  text-shadow: 0 0 10px var(--white);
+  transition: 0.5s;
+}
+
+i {
+  color: #00ffe1;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#socials {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 2rem;
+}
+
+/* Header text */
+#headers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--white);
+}
+
+/* Footer */
+#footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: medium;
+}
+
+footer {
+  padding: 1rem 1rem 0 1rem;
+  background: #212529;
+  color: var(--white);
+}
